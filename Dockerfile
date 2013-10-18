@@ -1,15 +1,14 @@
 # Kooboo CMS 3.3 Nginx Mono_fastcgi Host
 #
-# VERSION 0.01
+# VERSION 0.02
 
-FROM	lopter/raring-base
+FROM	ubuntu:quantal
 MAINTAINER Guillaume Lecomte "guillaume86@gmail.com"
 
 # make sure the package repository is up to date
-RUN echo "deb http://archive.ubuntu.com/ubuntu raring main universe" > /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu quantal main universe" > /etc/apt/sources.list
 RUN apt-get update
 
-RUN apt-get install -y mono-complete
 RUN apt-get install -y mono-fastcgi-server4
 RUN apt-get install -y nginx
 
